@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="autodex.com.autodex.activitys.UserProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_layout_height"
+            android:background="@color/backgroundcolor">
+
+            <FrameLayout
+                android:id="@+id/profileimgupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_90ssp"
+                    android:layout_height="@dimen/_90ssp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="@dimen/_2ssp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/_30ssp"
+                    android:layout_height="@dimen/_30ssp"
+                    android:layout_gravity="bottom|end"
+                    android:alpha=".5"
+                    app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/profilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileimgupdate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:text="Abishek"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="@dimen/_30ssp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/profileUpdateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/firstnamecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="First Name"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/middlenamecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Middle Name"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/lastnamecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Last Name"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/phonecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        myapp:hint="Phone Number"
+                        myapp:image="@drawable/ic_call"
+                        myapp:inputType="number"
+                        myapp:text="9600749363" />
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/emailcustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Email"
+                        myapp:image="@drawable/ic_mail_black_24dp"
+                        myapp:isShow="false"
+                        myapp:text="kapw001@gmail.com"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/dobcustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:alpha=".25"
+                        myapp:hint="DOB"
+                        myapp:image="@drawable/ic_calendar"
+                        myapp:isDateEditable="true"
+                        myapp:isShow="false"
+                        myapp:text="27-2-2017"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/address1customview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Address1"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/address2customview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Address2"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/citycustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="City"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/statecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="State"
+                        myapp:image="@drawable/ic_name"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                    <autodex.com.autodex.customview.UserCustomView
+                        android:id="@+id/zipcodecustomview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        myapp:hint="Zipcode"
+                        myapp:image="@drawable/ic_name"
+                        myapp:inputType="number"
+                        myapp:isShow="false"
+                        myapp:text="Abishek"></autodex.com.autodex.customview.UserCustomView>
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bannerunitid"></com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

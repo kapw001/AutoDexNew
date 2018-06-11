@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="autodex.com.autodex.activitys.CustomViewActivity">
+
+    <LinearLayout
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <autodex.com.autodex.customview.UserCustomView
+            android:id="@+id/namecustomview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            myapp:image="@drawable/ic_name"
+            myapp:text="Ab"></autodex.com.autodex.customview.UserCustomView>
+
+        <autodex.com.autodex.customview.UserCustomView
+            android:id="@+id/emailcustomview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            myapp:image="@drawable/ic_name"
+            myapp:text="Test"></autodex.com.autodex.customview.UserCustomView>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:onClick="onChange"
+        android:text="change" />
+
+</RelativeLayout>

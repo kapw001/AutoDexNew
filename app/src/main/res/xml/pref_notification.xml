@@ -1,0 +1,85 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="pushnotification"
+        android:title="@string/pushnotification" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="birtnotification"
+        android:title="@string/birtnotification" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="newautodexuser"
+        android:title="@string/newautodexuser" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="contactnearme"
+        android:title="@string/contactnearme" />
+
+
+    <ListPreference
+        android:defaultValue="10"
+        android:dialogTitle="Choose Contact Range"
+        android:entries="@array/locationentries"
+        android:entryValues="@array/locationentries"
+        android:key="seekBar22"
+        android:summary="%s Mi"
+        android:title="Contact Range" />
+
+    <!--<SwitchPreference-->
+    <!--android:defaultValue="false"-->
+    <!--android:key="mkm"-->
+    <!--android:switchTextOff="miles"-->
+    <!--android:switchTextOn="km"-->
+    <!--android:title="Km/M" />-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference xmlns:sample="http://schemas.android.com/apk/res-auto"-->
+        <!--android:defaultValue="1"-->
+        <!--android:enabled="true"-->
+        <!--android:key="seekBar"-->
+        <!--android:title="Contact Range"-->
+        <!--sample:msbp_dialogEnabled="false"-->
+        <!--sample:msbp_maxValue="100"-->
+        <!--sample:msbp_measurementUnit="Mi"-->
+        <!--sample:msbp_minValue="1"-->
+        <!--sample:msbp_view_enabled="false" />-->
+
+    <!--<SeekBarPreference-->
+    <!--android:gravity="center"-->
+    <!--android:defaultValue="50"-->
+    <!--android:key="seekBar"-->
+    <!--android:max="100"-->
+    <!--android:title="Contact Range"></SeekBarPreference>-->
+
+    <!--<autodex.com.autodex.customview.SeekBarPreference-->
+    <!--android:defaultValue="50"-->
+    <!--android:key="seekBar"-->
+    <!--android:max="100"-->
+    <!--android:title="Contact Range">-->
+
+    <!--</autodex.com.autodex.customview.SeekBarPreference>-->
+
+    <!--<autodex.com.autodex.customview.SeekBarPreferenceTest-->
+    <!--android:defaultValue="50"-->
+    <!--android:key="seekBar"-->
+    <!--android:max="100"-->
+    <!--android:title="Contact Range">-->
+
+    <!--</autodex.com.autodex.customview.SeekBarPreferenceTest>-->
+
+
+    <!--<SeekBarPreference-->
+    <!--android:defaultValue="50"-->
+    <!--android:key="someKey"-->
+    <!--android:max="100"-->
+    <!--android:textSize="10sp"-->
+    <!--android:title="Contact Range"-->
+    <!--app:asp_min="0" />-->
+
+
+</PreferenceScreen>

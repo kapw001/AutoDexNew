@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="autodex.com.autodex.activitys.UserProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_layout_height"
+        android:background="@color/backgroundcolor">
+
+        <FrameLayout
+            android:id="@+id/profileimgupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_90ssp"
+                android:layout_height="@dimen/_90ssp"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/white"
+                app:civ_border_overlay="true"
+                app:civ_border_width="@dimen/_2ssp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/_30ssp"
+                android:layout_height="@dimen/_30ssp"
+                android:layout_gravity="bottom|end"
+                android:alpha=".5"
+                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileimgupdate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:text="Abishek"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginTop="@dimen/_30ssp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <ImageView
+                        android:id="@+id/userimg"
+                        android:layout_width="@dimen/_20ssp"
+                        android:layout_height="@dimen/_20ssp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_name" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_15ssp"
+                        android:layout_marginRight="@dimen/_40ssp"
+                        android:layout_toRightOf="@+id/userimg"
+                        android:enabled="false"
+                        android:singleLine="true"
+                        android:text="Abishek"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/backgroundcolor"
+                        android:clickable="true"
+                        android:onClick="showPopup"
+                        android:padding="@dimen/_5ssp">
+
+                        <ImageView
+                            android:id="@+id/usernameprivacyiconchange"
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <ImageView
+                        android:id="@+id/phoneimg"
+                        android:layout_width="@dimen/_20ssp"
+                        android:layout_height="@dimen/_20ssp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_call" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_15ssp"
+                        android:layout_marginRight="@dimen/_40ssp"
+                        android:layout_toEndOf="@+id/phoneimg"
+                        android:layout_toRightOf="@+id/phoneimg"
+                        android:enabled="false"
+                        android:singleLine="true"
+                        android:text="+91 9600749363"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/backgroundcolor"
+                        android:clickable="true"
+                        android:onClick="showPopup"
+                        android:padding="@dimen/_5ssp">
+
+                        <ImageView
+                            android:id="@+id/phonenumberprivacyiconchange"
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <ImageView
+                        android:id="@+id/mailimg"
+                        android:layout_width="@dimen/_20ssp"
+                        android:layout_height="@dimen/_20ssp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_mail_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_15ssp"
+                        android:layout_marginRight="@dimen/_40ssp"
+                        android:layout_toEndOf="@+id/mailimg"
+                        android:layout_toRightOf="@+id/mailimg"
+                        android:enabled="false"
+                        android:singleLine="true"
+                        android:text="kapw001@gmail.com"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/backgroundcolor"
+                        android:clickable="true"
+                        android:onClick="showPopup"
+                        android:padding="@dimen/_5ssp">
+
+                        <ImageView
+                            android:id="@+id/emailprivacyiconchange"
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <ImageView
+                        android:id="@+id/calenderimg"
+                        android:layout_width="@dimen/_20ssp"
+                        android:layout_height="@dimen/_20ssp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:alpha=".25"
+                        app:srcCompat="@drawable/ic_calendar" />
+
+                    <EditText
+                        android:id="@+id/dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_15ssp"
+                        android:layout_marginRight="@dimen/_40ssp"
+                        android:layout_toEndOf="@+id/calenderimg"
+                        android:layout_toRightOf="@+id/calenderimg"
+                        android:enabled="false"
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:text="06/02/1989"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/backgroundcolor"
+                        android:clickable="true"
+                        android:onClick="showPopup"
+                        android:padding="@dimen/_5ssp">
+
+                        <ImageView
+                            android:id="@+id/dobprivacyiconchange"
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp">
+
+                    <ImageView
+                        android:id="@+id/mfimg"
+                        android:layout_width="@dimen/_20ssp"
+                        android:layout_height="@dimen/_20ssp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:alpha=".25"
+                        app:srcCompat="@drawable/ic_gender" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_15ssp"
+                        android:layout_toEndOf="@+id/mfimg"
+                        android:layout_toRightOf="@+id/mfimg"
+
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radiogroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkedButton="@+id/male"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Male"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="Female"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/backgroundcolor"
+                        android:clickable="true"
+                        android:onClick="showPopup"
+                        android:padding="@dimen/_5ssp">
+
+                        <ImageView
+                            android:id="@+id/genderprivacyiconchange"
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_lock" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_10ssp"
+                            android:layout_height="@dimen/_10ssp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context="autodex.com.autodex.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_50ssp"
+            android:layout_marginRight="@dimen/_50ssp"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardbackgroundcolor"
+                app:cardBackgroundColor="@color/cardbackgroundcolor"
+                app:cardCornerRadius="2dp">
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_40ssp"
+            android:layout_marginRight="@dimen/_40ssp"
+            android:layout_marginTop="@dimen/_40ssp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:cardBackgroundColor="@color/secondcardbackgroundcolor"
+                app:cardCornerRadius="2dp">
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_30ssp"
+            android:layout_marginRight="@dimen/_30ssp"
+            android:layout_marginTop="@dimen/_60ssp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/t"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100ssp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_80ssp"
+                                android:layout_height="@dimen/_80ssp"
+                                android:src="@mipmap/ic_logo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Autodex"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_22ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <!--<ScrollView-->
+                    <!--android:id="@+id/linearLayout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_above="@+id/signup"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_below="@+id/t"-->
+                    <!--android:layout_marginTop="@dimen/_10ssp">-->
+
+
+                    <ScrollView
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/signup"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/t"
+                        android:scrollbarSize="@dimen/_5ssp"
+                        android:scrollbars="vertical">
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_10ssp"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/nametxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/name"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_name"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/firstname"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/middletxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/middlename"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_name"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/middlename"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/lastnametxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/lastname"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_name"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/lastname"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/phonenumbertxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/phonenumber"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_call"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/phone"
+                                        android:inputType="number"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/passwordtxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/password"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_lock"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/password"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/confirmpasswordtxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:errorEnabled="true"
+                                    app:errorTextAppearance="@style/error">
+
+                                    <EditText
+                                        android:id="@+id/confirmpassword"
+                                        style="@style/EditText.Login"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/ic_lock"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/confirmpassword"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_12ssp"
+                                        android:theme="@style/EditText.Login" />
+                                </android.support.design.widget.TextInputLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="@dimen/_40ssp"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/terms"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha=".8" />
+
+                                    <TextView
+                                        android:id="@+id/termsTxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/terms"
+                                        android:textSize="@dimen/_10ssp" />
+
+
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <Button
+                        android:id="@+id/signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30ssp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/backgroundcolor"
+                        android:text="@string/sign_up"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30ssp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".5"
+                android:text="Already have an account? "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

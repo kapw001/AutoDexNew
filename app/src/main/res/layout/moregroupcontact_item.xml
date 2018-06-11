@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10ssp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_contact"
+        android:layout_width="@dimen/_35ssp"
+        android:layout_height="@dimen/_35ssp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/profile" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/img_contact"
+        android:layout_toRightOf="@+id/img_contact"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#000"
+        android:textSize="@dimen/_12ssp"
+        tools:text="Contact Name" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8463BE</color>
+    <color name="colorPrimaryDark">#54388d</color>
+    <color name="colorAccent">#b691f1</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="cardbackgroundcolor">#C49AE1</color>
+    <color name="secondcardbackgroundcolor">#DEC9EA</color>
+    <color name="backgroundcolor">#8463BE</color>
+    <color name="backgroundcolorsecond">#F4F4F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white1">#FAFAFA</color>
+    <color name="blackalpha">#1A000000</color>
+    <color name="blackalpha1">#80000000</color>
+    <color name="blackalpha2">#40000000</color>
+    <color name="blackalpha3">#FAFAFA</color>
+    <color name="red">#FF0000</color>
+    <color name="reda">#F56A60</color>
+    <color name="greena">#59AE43</color>
+
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>
+
+
+    <!--<color name="colorPrimary">#8B00C3</color>--><!--<color name="colorPrimaryDark">#70009C</color>--><!--<color name="colorAccent">#70009C</color>--><!--&lt;!&ndash;<color name="colorAccent">#FF4081</color>&ndash;&gt;--><!--<color name="cardbackgroundcolor">#C49AE1</color>--><!--<color name="secondcardbackgroundcolor">#DEC9EA</color>--><!--<color name="backgroundcolor">#8B00C3</color>--><!--<color name="backgroundcolorsecond">#F4F4F4</color>--><!--<color name="white">#FFFFFF</color>--><!--<color name="black">#000000</color>--><!--<color name="white1">#FAFAFA</color>--><!--<color name="blackalpha">#1A000000</color>--><!--<color name="blackalpha1">#80000000</color>--><!--<color name="blackalpha2">#40000000</color>--><!--<color name="blackalpha3">#FAFAFA</color>--><!--<color name="red">#FF0000</color>--><!--<color name="reda">#F56A60</color>--><!--<color name="greena">#59AE43</color>-->
